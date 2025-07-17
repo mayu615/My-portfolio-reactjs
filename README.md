@@ -1,12 +1,70 @@
-# React + Vite
+# 🚀 My Portfolio – Built with React + Vite + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This project showcases my skills, projects, and contact information using modern frontend technologies like **React**, **Vite**, and **Tailwind CSS**. It is designed to be clean, responsive, and interactive, with smooth animations and a focus on performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ⚛️ Built with React + Vite for lightning-fast development
+- 🎨 Styled using Tailwind CSS for rapid UI building
+- 🧭 Single Page Application (SPA) with smooth navigation using React Router
+- 🌙 Dark mode toggle with theme persistence
+- 💻 Responsive design for all devices
+- 🖼️ Project cards with animated hover effects
+- 📨 Integrated contact form with EmailJS
+- 🧠 Scroll reveal animations with Framer Motion
+- 📂 Separate dynamic project details page (using route-based rendering)
+- 🌐 Deployed live on Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Project Structure
+
+My-portfolio-reactjs/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ ├── context/
+│ ├── App.jsx
+│ └── main.jsx
+├── .gitignore
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+
+
+---
+
+## 🔧 Tech Stack
+
+- **Frontend:** React, Vite, JSX
+- **Styling:** Tailwind CSS, CSS animations
+- **Routing:** React Router
+- **Animation:** Framer Motion
+- **Form Handling:** EmailJS
+- **Deployment:** Vercel
+
+---
+
+## 🖼️ Screenshots
+
+> _(Add images of your portfolio UI here if available)_
+
+---
+
+## 🚀 Getting Started
+
+Clone the repo and run locally:
+
+```bash
+git clone https://github.com/mayu615/My-portfolio-reactjs.git
+cd My-portfolio-reactjs
+npm install
+npm run dev
+
+
+@ Mayuri Chatap
