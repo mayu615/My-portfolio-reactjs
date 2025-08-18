@@ -9,10 +9,15 @@ const allProjects = [
     id: "food-delivery-app",
     title: "Food Delivery App",
     technologies: [
-      "React", "Node.js", "MongoDB Atlas",
-      "Axios", "Bootstrap", "Express.js", "Mongoose"
+      "React",
+      "Node.js",
+      "MongoDB Atlas",
+      "Axios",
+      "Bootstrap",
+      "Express.js",
+      "Mongoose",
     ],
-    image: "food-delivery-app.png", 
+    image: "food-delivery-app.png",
     category: "Fullstack",
   },
   {
@@ -53,17 +58,23 @@ function Home() {
   const [profileClicked, setProfileClicked] = useState(false);
 
   const filteredProjects =
-    filter === "All" ? allProjects : allProjects.filter((p) => p.category === filter);
+    filter === "All"
+      ? allProjects
+      : allProjects.filter((p) => p.category === filter);
 
   return (
-    <section className="min-h-screen px-6 py-16 text-white bg-gradient-to-br from-purple-600 via-pink-500 to-red-500">
+    <section className="min-h-screen px-6 py-16 bg-gradient-to-br from-rose-100 via-violet-200 to-indigo-200 text-gray-900 dark:from-purple-900 dark:via-purple-800 dark:to-pink-900 dark:text-gray-100 transition-all duration-500">
       <div className="text-center mb-16">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
           Hello, I'm <span className="text-emerald-300">Mayuri</span>
         </h1>
-        <p className="text-xl text-yellow-200">
+        <p className="text-xl text-pink-600 dark:text-yellow-200">
           <Typewriter
-            words={["Frontend Developer", "JavaScript Developer", "Creative Coder"]}
+            words={[
+              "Frontend Developer",
+              "JavaScript Developer",
+              "Full Stack Developer",
+            ]}
             loop
             cursor
             cursorStyle="|"
@@ -74,8 +85,9 @@ function Home() {
         </p>
         <div className="flex justify-center mt-6">
           <motion.img
-            src="/mayu4.jpg"
+            src="/mayu5.jpg"
             alt="Mayuri"
+            title="Click to animate profile"
             whileHover={{ scale: 1.1, rotate: 2 }}
             animate={
               profileClicked
@@ -92,7 +104,7 @@ function Home() {
                 : { boxShadow: "none", scale: 1, rotate: 0 }
             }
             onClick={() => setProfileClicked((prev) => !prev)}
-            className="w-35 h-45 sm:w-40 sm:h-40 rounded-2xl shadow-lg cursor-pointer"
+            className="w-32 h-40 sm:w-40 sm:h-40 rounded-2xl shadow-lg cursor-pointer"
           />
         </div>
       </div>
@@ -116,15 +128,19 @@ function Home() {
               whileHover={{ scale: 1.05, rotate: 2 }}
               className="rounded-lg w-full h-48 object-cover mb-4"
             />
-            <h3 className="text-xl font-semibold text-emerald-300">{project.title}</h3>
-            <p className="text-sm mt-1 text-gray-200">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-emerald-300">
+              {project.title}
+            </h3>
+            <p className="text-sm mt-1 text-gray-700 dark:text-gray-200">
               {project.technologies.join(" ● ")}
             </p>
           </motion.div>
         ))}
       </div>
 
-      {selected && <Modal project={selected} onClose={() => setSelected(null)} />}
+      {selected && (
+        <Modal project={selected} onClose={() => setSelected(null)} />
+      )}
     </section>
   );
 }

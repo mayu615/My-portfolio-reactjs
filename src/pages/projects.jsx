@@ -66,7 +66,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className="relative bg-white/90 dark:bg-gray-900/70 backdrop-blur-md border border-purple-200 dark:border-gray-700 rounded-2xl shadow-xl p-6 transition-all duration-300 group overflow-hidden hover:shadow-pink-300"
+              className="relative bg-white/90 dark:bg-gray-900/80 backdrop-blur-md border border-purple-200 dark:border-gray-700 rounded-2xl shadow-xl p-6 transition-all duration-300 group overflow-hidden hover:shadow-pink-300"
               variants={projectVariants}
               custom={index}
               whileHover={{ rotateY: 8, rotateX: 3, scale: 1.03 }}
@@ -75,11 +75,11 @@ const Projects = () => {
               {/* Glow Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-pink-200/30 to-purple-300/30 dark:from-purple-700/30 dark:to-pink-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
 
-              <div className="relative z-10">
-                <h3 className="text-2xl font-semibold text-purple-800 dark:text-pink-300 mb-2">
+              <div className="bg-white dark:bg-darkBg text-gray-800 dark:text-gray-200 p-4 rounded-xl shadow">
+                <h3 className="text-xl font-bold text-purple-800 dark:text-pink-300 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   {project.description}
                 </p>
                 <div className="flex items-center gap-6">
@@ -87,7 +87,7 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-600 dark:text-indigo-300 font-semibold hover:underline"
+                    className="text-indigo-700 dark:text-indigo-300 font-semibold hover:underline"
                   >
                     Live Site
                   </a>
@@ -95,7 +95,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-800 dark:text-white hover:text-emerald-400 transition-colors"
+                    className="text-gray-900 dark:text-gray-100 hover:text-emerald-400 transition-colors"
                   >
                     <FaGithub size={22} />
                   </a>

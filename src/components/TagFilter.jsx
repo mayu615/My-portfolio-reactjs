@@ -11,7 +11,7 @@ function TagFilter({ current, onChange }) {
             ${
               current === tag
                 ? "bg-emerald-400 text-white"
-                : "bg-white/20 hover:bg-emerald-500 hover:text-white text-gray-100"
+                : "bg-white/30 text-gray-800 hover:bg-emerald-500 hover:text-white dark:bg-white/10 dark:text-gray-100"
             }`}
         >
           {tag}

@@ -8,17 +8,23 @@ const projectData = [
     description:
       "A full-stack food ordering application with authentication, cart management, and order tracking.",
     technologies: [
-      "React", "Node.js", "MongoDB Atlas",
-      "Axios","Bootstrap", "Express.js", "Mongoose"
+      "React",
+      "Node.js",
+      "MongoDB Atlas",
+      "Axios",
+      "Bootstrap",
+      "Express.js",
+      "Mongoose",
     ],
     image: "food-delivery-app.png",
     github: "https://github.com/mayu615/food-delivery-app",
-    live: "https://food-delivery-frontend-nmgj.onrender.com", 
+    live: "https://food-delivery-frontend-nmgj.onrender.com",
   },
   {
     id: "real-estate",
     title: "Real Estate",
-    description: "A modern real estate listing site with filters and map support.",
+    description:
+      "A modern real estate listing site with filters and map support.",
     technologies: ["React.js", "Redux", "Tailwind CSS"],
     image: "real-estate.png",
     github: "https://github.com/mayu615/Real-Estate-project",
@@ -73,10 +79,13 @@ function ProjectDetails() {
         <h1 className="text-4xl font-bold text-emerald-600 dark:text-emerald-400">
           {project.title}
         </h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300">{project.description}</p>
-        <p className="text-md font-medium text-yellow-700 dark:text-yellow-300">
+        <p className="text-lg text-gray-700 dark:text-gray-200">
+          {project.description}
+        </p>
+        <p className="text-sm mt-1 text-gray-900 dark:text-gray-200">
           {project.technologies.join(" ● ")}
         </p>
+
         <div className="flex gap-4 mt-6 flex-wrap">
           <a
             href={project.live}
@@ -95,7 +104,10 @@ function ProjectDetails() {
             GitHub
           </a>
         </div>
-        <Link to="/projects" className="text-blue-600 dark:text-blue-400 hover:underline">
+        <Link
+          to="/projects"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
           ← Back to Projects
         </Link>
       </div>

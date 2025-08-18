@@ -10,22 +10,28 @@ function Modal({ project, onClose }) {
       onClick={onClose}
     >
       <motion.div
-        className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-lg w-full relative"
+        className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg max-w-lg w-full relative transition-all duration-300"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0.8 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <img src={project.image} alt={project.title} className="rounded mb-4" />
+        <img
+          src={project.image}
+          alt={project.title}
+          className="rounded mb-4 shadow-md dark:shadow-gray-950"
+        />
         <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
           {project.title}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Tech Stack: {project.technologies.join(", ")}
+        <p className="text-gray-700 dark:text-yellow-300 font-medium mb-4">
+          Tech Stack: {project.technologies?.join(", ")}
         </p>
+
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-red-600 hover:text-red-400"
+          className="absolute top-2 right-2 text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 text-xl"
+          aria-label="Close modal"
         >
           ✕
         </button>
